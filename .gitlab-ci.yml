@@ -1,34 +1,15 @@
-image: node:latest
+image: alpine
 
 stages:
-  - build
-  - test
   - deploy
-
-cache:
-  paths:
-    - node_modules/
-
-before_script:
-  - npm install  # Installer les dépendances
-
-build:
-  stage: build
-  script:
-    - npm run build  # Assurez-vous d’avoir une commande "build" dans package.json
-
-test:
-  stage: test
-  script:
-    - npm test  # Assurez-vous d’avoir des tests configurés
 
 pages:
   stage: deploy
   script:
-    - mkdir public
-    - cp -r * public
+    - mkdir -p public
+    - cp -r * public  # Copier tous les fichiers dans le dossier public
   artifacts:
     paths:
       - public
   only:
-    - main
+    - main  # Remplace "main" si ta branche principale porte un autre nom
