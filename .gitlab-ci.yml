@@ -3,10 +3,10 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-  - echo 'Nothing to do...'
+    - mkdir -p public
+    - cp -r * public/  # Copie tout le contenu dans public/
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
-
+    - master
