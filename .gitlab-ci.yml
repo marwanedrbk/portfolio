@@ -1,10 +1,12 @@
-stages:
-  - deploy
+image: alpine:latest
 
-deploy:
+pages:
   stage: deploy
   script:
-    - mkdir -p public
-    - rsync -av --exclude=public . public/
+  - echo 'Nothing to do...'
+  artifacts:
+    paths:
+    - public
   only:
-    - master
+  - master
+
