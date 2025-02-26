@@ -1,12 +1,15 @@
-image: alpine:latest
 
+image: debian:stable
 pages:
   stage: deploy
   script:
-    - mkdir -p public
-    - cp -r * public/  # Copie tout le contenu dans public/
+  - mkdir -p public
+  - mkdir -p public/test.html
+  - apt-get update && apt-get -y install pandoc
+  - bash api/deploy.sh
+  - echo "fin traitement"
   artifacts:
     paths:
-      - public
+    - public
   only:
-    - master
+  - master
