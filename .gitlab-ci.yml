@@ -3,10 +3,11 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-  - echo 'Nothing to do...'
+    - mkdir -p public  # Crée le dossier public
+    - cp index.html public/  # Copie le fichier HTML dans public
+    - cp -r assets public/  # Copie le dossier assets dans public
   artifacts:
     paths:
-    - public
+      - public  # Spécifie que public/ doit être déployé
   only:
-  - master
-
+    - master  # Déploie uniquement sur la branche master
