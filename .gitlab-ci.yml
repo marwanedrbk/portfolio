@@ -1,15 +1,12 @@
+image: alpine:latest
 
-image: debian:stable
 pages:
   stage: deploy
   script:
-  - mkdir -p public
-  - mkdir -p public/test.html
-  - apt-get update && apt-get -y install pandoc
-  - bash api/deploy.sh
-  - echo "fin traitement"
+  - echo 'Nothing to do...'
   artifacts:
     paths:
     - public
   only:
   - master
+
