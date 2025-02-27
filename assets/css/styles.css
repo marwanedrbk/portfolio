@@ -582,8 +582,44 @@ img{
     background: #0056b3;
     transform: scale(1.1);
 }
+/* ===== MAISON DU JEU ===== */
+.details {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--white-color);
+}
 
+.details h2 {
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    margin-bottom: var(--mb-2);
+}
 
+.details p {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto var(--mb-3);
+    line-height: 1.8;
+}
 
+.details img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: .5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.details img:hover {
+    transform: scale(1.05);
+}
+
+.portfolio__img img {
+    width: 100%;
+    height: 200px; /* Ajuste la hauteur selon ton besoin */
+    object-fit: cover; /* Rognage automatique pour garder le focus sur le centre */
+    border-radius: .5rem;
+}
 
 
