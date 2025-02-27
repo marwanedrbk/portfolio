@@ -553,6 +553,36 @@ img{
     animation: fadeIn 1s ease-out;
 }
 
+.email-link {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.email-link:hover {
+    color: blue;
+    transform: scale(0.9);
+}
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007BFF;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
 
 
 
