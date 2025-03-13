@@ -95,4 +95,54 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const messageDiv = document.getElementById("form-message");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Empêche la redirection
+
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("Erreur lors de l'envoi");
+            }
+        })
+        .then(data => {
+            // Afficher le message avec fade-in
+            messageDiv.innerHTML = "<p style='color: green;'>Message envoyé avec succès !</p>";
+            messageDiv.style.opacity = "1";
+
+            form.reset(); // Réinitialiser le formulaire
+
+            // Masquer le message après 5 secondes
+            setTimeout(() => {
+                messageDiv.style.opacity = "0";
+            }, 5000);
+        })
+        .catch(error => {
+            // En cas d'erreur
+            messageDiv.innerHTML = "<p style='color: red;'>Une erreur est survenue. Réessayez plus tard.</p>";
+            messageDiv.style.opacity = "1";
+
+            setTimeout(() => {
+                messageDiv.style.opacity = "0";
+            }, 5000);
+        });
+    });
+});
+
+
+
+
 

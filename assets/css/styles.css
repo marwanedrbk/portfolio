@@ -622,4 +622,31 @@ img{
     border-radius: .5rem;
 }
 
+.nav__home {
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Get it to display inline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#form-message {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#form-message.show {
+    opacity: 1;
+}
+
+
+.phone-link {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.phone-link:hover {
+    color: blue;
+    transform: scale(0.9);
+}
 
