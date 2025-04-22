@@ -11,6 +11,112 @@
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <title>Portfolio</title>
+
+        <style>
+            /*===== VARIABLES CSS =====*/
+            :root {
+                --header-height: 3rem;
+                --first-color: #7d0479;
+                --white-color: #FAFAFF;
+                --dark-color: #2A3B47;
+                --text-color: #697477;
+                --body-font: 'Montserrat', sans-serif;
+                --h2-font-size: 1.25rem;
+                --normal-font-size: .938rem;
+                --mb-4: 2rem;
+            }
+
+            /*===== BASE =====*/
+            body {
+                margin: var(--header-height) 0 0 0;
+                font-family: var(--body-font);
+                font-size: var(--normal-font-size);
+                color: var(--text-color);
+                line-height: 1.6;
+            }
+            h1, h2, p {
+                margin: 0;
+            }
+            a {
+                text-decoration: none;
+                color: var(--text-color);
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            /*===== SECTION =====*/
+            .section {
+                padding: 3rem 0;
+            }
+            .section-title {
+                font-size: var(--h2-font-size);
+                color: var(--dark-color);
+                margin-bottom: var(--mb-4);
+                text-align: center;
+            }
+
+            /*===== PORTFOLIO =====*/
+            .portfolio {
+                background-color: var(--white-color);
+            }
+            .portfolio__container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .portfolio__img {
+                max-width: 400px;
+                width: 100%;
+            }
+            .portfolio__img img {
+                width: 100%;
+                height: auto;
+                border-radius: .5rem;
+            }
+            .portfolio__text {
+                margin-top: 20px;
+                font-size: 1rem;
+                color: #333;
+            }
+            .portfolio__link {
+                margin-top: 15px;
+            }
+            .portfolio__link-name {
+                color: #007BFF;
+                font-weight: bold;
+            }
+
+            /*===== FOOTER =====*/
+            .footer {
+                background-color: var(--dark-color);
+                color: var(--white-color);
+                text-align: center;
+                padding: 2rem 0;
+            }
+            .footer__title {
+                font-size: var(--normal-font-size);
+                margin-bottom: var(--mb-4);
+            }
+            .footer__link {
+                color: var(--white-color);
+            }
+            .footer__link:hover {
+                color: var(--first-color);
+            }
+
+            /*===== MEDIA QUERIES =====*/
+            @media screen and (min-width: 768px) {
+                .portfolio__container {
+                    flex-direction: row;
+                }
+            }
+        </style>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -108,56 +214,29 @@
             </section>
 
             <!--===== PORTFOLIO =====-->
-            <section class="portfolio section" id="portfolio">
-                <h2 class="section-title">Projets</h2>
-                <div class="portfolio__container bd-grid">
-                    
-                    <div class="portfolio__img">
-                        <a href="details.html">
-                            <img src="assets/img/amphie.jpg" alt="">
-                        </a>
-                        <div class="portfolio__link">
-                            <a href="stage1.html" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
+<section class="portfolio section" id="portfolio">
+    <h2 class="section-title">Projets/Expériences pro </h2>
+    <div class="portfolio__container bd-grid">
+
+        <!-- Dernière image avec texte de présentation -->
+        <div class="portfolio__img">
+            <img src="assets/img/portfolio.webp" alt="">
             
-                    <div class="portfolio__img">
-                        <img src="assets/img/mairie.png" alt="">
-                        <div class="portfolio__link">
-                            <a href="stage2.html" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
-            
-                    <div class="portfolio__img">
-                        <img src="assets/img/ministage.jpg" alt="">
-                        <div class="portfolio__link">
-                            <a href="ministage.html" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
-            
-                    <div class="portfolio__img">
-                        <img src="assets/img/maisondujeu.jpg" alt="">
-                        <div class="portfolio__link">
-                            <a href="maison-du-jeu.html" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
-            
-                    <div class="portfolio__img">
-                        <img src="assets/img/7familles.jpg" alt="">
-                        <div class="portfolio__link">
-                            <a href="7familles.html" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
-            
-                    <div class="portfolio__img">
-                        <img src="assets/img/portfolio.webp" alt="">
-                        <div class="portfolio__link">
-                            <a href="portfolio.html" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
-            
-                </div> <!-- Fermeture correcte de .portfolio__container -->
-            </section>
+            <div class="portfolio__link">
+                <a href="projets.html" class="portfolio__link-name">Voir mes réalisations professionnelles</a>
+            </div>
+        </div>
+        <div class="portfolio__text">
+            <p>Pendant mes deux années de BTS SIO, j'ai participé
+            à divers projets et expériences professionnelles qui
+            m'ont permis de développer des compétences en développement
+            web, gestion de bases de données et travail en équipe. Ces
+            expériences m'ont aussi appris à m'adapter aux besoins des projets et à respecter les délais.</p>
+        </div>
+
+    </div> 
+</section>
+
             
 
             <!--===== CONTACT =====-->
