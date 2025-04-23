@@ -3,12 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Maison du Jeu - Détails</title>
+  <title>Maison du Jeu - 7 Familles</title>
 
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
   <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #ecf0f1;
+      font-size: 0.9rem;
+    }
+
     .carousel-container {
       position: relative;
       width: 90%;
@@ -66,19 +101,18 @@
 
   <main>
     <section class="details">
-      <h2>Stage 1ère année</h2>
-      <p>Stage de 1ère année se déroulant à l'université de Nantes.</p>
+      <h2>👨‍💻 7 Familles</h2>
+      <p>Voici le projet des "7 Familles", un jeu inspiré du traditionnel jeu de cartes "7 Familles". Il permet de découvrir des figures historiques importantes dans le domaine des sciences informatiques.</p>
 
-      <!-- ========== SLIDER ========== -->
       <div class="carousel-container">
         <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
 
         <div class="carousel-slide" id="carouselSlide">
-          <img src="assets/img/Acceuil_7Familles.png" class="carousel-image" alt="Photo 1" onclick="openFullscreen(this)">
-          <img src="assets/img/AL-KHWARIZMI_7Familles.png" class="carousel-image" alt="Photo 2" onclick="openFullscreen(this)">
-          <img src="assets/img/adaLovelace_7Familles.png" class="carousel-image" alt="Photo 3" onclick="openFullscreen(this)">
-          <img src="assets/img/dorothyVaughan_7Familles.png" class="carousel-image" alt="Photo 4" onclick="openFullscreen(this)">
-          <img src="assets/img/GerardBerry_7Familles.png" class="carousel-image" alt="Photo 5" onclick="openFullscreen(this)">
+          <img src="assets/img/Acceuil_7Familles.png" class="carousel-image" alt="Accueil 7 Familles" onclick="openFullscreen(this)">
+          <img src="assets/img/AL-KHWARIZMI_7Familles.png" class="carousel-image" alt="Al-Khwārizmī 7 Familles" onclick="openFullscreen(this)">
+          <img src="assets/img/adaLovelace_7Familles.png" class="carousel-image" alt="Ada Lovelace 7 Familles" onclick="openFullscreen(this)">
+          <img src="assets/img/dorothyVaughan_7Familles.png" class="carousel-image" alt="Dorothy Vaughan 7 Familles" onclick="openFullscreen(this)">
+          <img src="assets/img/GerardBerry_7Familles.png" class="carousel-image" alt="Gerard Berry 7 Familles" onclick="openFullscreen(this)">
         </div>
 
         <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
@@ -87,7 +121,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Marwane Dribek - Tous droits réservés.</p>
+    &copy; 2025 Marwane Dribek - Tous droits réservés.
   </footer>
 
   <script>
